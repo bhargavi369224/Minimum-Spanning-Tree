@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Minimum Spanning Tree Algorithms</title>
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#eef2f7;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+color:#0d6efd;
+}
+
+h2{
+color:#0d6efd;
+margin-top:25px;
+}
+
+.algorithm{
+background:#f8f9fa;
+padding:15px;
+border-left:5px solid #0d6efd;
+margin-top:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table,th,td{
+border:1px solid #999;
+}
+
+th{
+background:#0d6efd;
+color:white;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+}
+
+button{
+background:#0d6efd;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#084298;
+}
+
+#output{
+margin-top:20px;
+font-weight:bold;
+color:green;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Minimum Spanning Tree (MST)</h1>
+
+<p>
+
+This project demonstrates two famous graph algorithms used to construct the Minimum Spanning Tree (MST).
+
+</p>
+
+<h2>Algorithms</h2>
+
+<div class="algorithm">
+
+<h3>Prim's Algorithm</h3>
+
+<p>
+
+Starts from one vertex and repeatedly selects the smallest edge connecting a visited vertex to an unvisited vertex.
+
+</p>
+
+</div>
+
+<div class="algorithm">
+
+<h3>Kruskal's Algorithm</h3>
+
+<p>
+
+Sorts all graph edges and repeatedly selects the smallest edge without creating a cycle.
+
+</p>
+
+</div>
+
+<h2>Time Complexity</h2>
+
+<table>
+
+<tr>
+
+<th>Algorithm</th>
+
+<th>Best</th>
+
+<th>Average</th>
+
+<th>Worst</th>
+
+</tr>
+
+<tr>
+
+<td>Prim's</td>
+
+<td>O(V²)</td>
+
+<td>O(V²)</td>
+
+<td>O(V²)</td>
+
+</tr>
+
+<tr>
+
+<td>Kruskal's</td>
+
+<td>O(E log E)</td>
+
+<td>O(E log E)</td>
+
+<td>O(E log E)</td>
+
+</tr>
+
+</table>
+
+<h2>Advantages</h2>
+
+<ul>
+
+<li>Efficient graph optimization.</li>
+
+<li>Finds the minimum total edge weight.</li>
+
+<li>Useful in networking, transportation, and circuit design.</li>
+
+</ul>
+
+<button onclick="showMessage()">
+
+Compare Algorithms
+
+</button>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("output").innerHTML=
+"Prim's Algorithm is generally preferred for dense graphs, while Kruskal's Algorithm performs better for sparse graphs. Both algorithms produce the same Minimum Spanning Tree.";
+
+}
+
+</script>
+
+<footer>
+
+<hr>
+
+<p>© 2026 Bhargavi | Minimum Spanning Tree Project</p>
+
+</footer>
+
+</body>
+</html>
